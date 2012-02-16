@@ -11,9 +11,9 @@ License:          MIT
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 %if %{with bootstrap}
-Requires:         R-abind R-testthat R-tcltk R-foreach R-itertools R-iterators 
-%else
 Requires:         R-abind R-tcltk R-foreach R-itertools R-iterators 
+%else
+Requires:         R-abind R-testthat R-tcltk R-foreach R-itertools R-iterators 
 %endif
 BuildRequires:    R-devel Rmath-devel texlive-collection-latex 
 %if %{with bootstrap}
