@@ -1,10 +1,10 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  plyr
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.7.1
-Release:          1
+Release:          2
 Summary:          Tools for splitting, applying and combining data
 Group:            Sciences/Mathematics
 License:          MIT
