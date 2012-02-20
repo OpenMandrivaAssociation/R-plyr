@@ -21,6 +21,7 @@ BuildRequires:    R-abind R-tcltk R-foreach R-itertools R-iterators
 %else
 BuildRequires:    R-abind R-testthat R-tcltk R-foreach R-itertools R-iterators 
 %endif
+BuildRequires:    x11-server-xvfb
 
 %description
 plyr is a set of tools that solves a common set of problems: you need to
@@ -44,7 +45,7 @@ rm -f %{buildroot}%{rlibdir}/R.css
 
 %if %{without bootstrap}
 %check
-%{_bindir}/R CMD check %{packname}
+xvfb-run %{_bindir}/R CMD check %{packname}
 %endif
 
 %files
