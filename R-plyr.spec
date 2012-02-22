@@ -10,16 +10,14 @@ Group:            Sciences/Mathematics
 License:          MIT
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
-%if %{with bootstrap}
-Requires:         R-abind R-tcltk R-foreach R-itertools R-iterators 
-%else
-Requires:         R-abind R-testthat R-tcltk R-foreach R-itertools R-iterators 
+Requires:         R-abind R-tcltk R-foreach R-itertools R-iterators
+%if %{without bootstrap}
+Requires:         R-testthat
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex 
-%if %{with bootstrap}
-BuildRequires:    R-abind R-tcltk R-foreach R-itertools R-iterators 
-%else
-BuildRequires:    R-abind R-testthat R-tcltk R-foreach R-itertools R-iterators 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-abind R-tcltk R-foreach R-itertools R-iterators
+%if %{without bootstrap}
+BuildRequires:    R-testthat
 %endif
 BuildRequires:    x11-server-xvfb
 
