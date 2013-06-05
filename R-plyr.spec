@@ -3,13 +3,13 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.7.1
-Release:          2
+Version:          1.8
+Release:          1
 Summary:          Tools for splitting, applying and combining data
 Group:            Sciences/Mathematics
 License:          MIT
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/plyr_1.8.tar.gz
 Requires:         R-abind R-tcltk R-foreach R-itertools R-iterators
 %if %{without bootstrap}
 Requires:         R-testthat
@@ -60,3 +60,4 @@ xvfb-run %{_bindir}/R CMD check %{packname}
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
 %{rlibdir}/%{packname}/tests
+
