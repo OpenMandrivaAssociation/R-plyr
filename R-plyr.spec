@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          1.7.1
-Release:          2
+Release:          3
 Summary:          Tools for splitting, applying and combining data
 Group:            Sciences/Mathematics
 License:          MIT
