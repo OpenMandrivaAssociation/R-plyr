@@ -8,7 +8,7 @@ Release:          3
 Summary:          Tools for splitting, applying and combining data
 Group:            Sciences/Mathematics
 License:          MIT
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+URL:              https://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 Requires:         R-abind R-tcltk R-foreach R-itertools R-iterators
 %if %{without bootstrap}
